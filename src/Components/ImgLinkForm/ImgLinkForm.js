@@ -1,7 +1,7 @@
 import React from "react";
 import "./imglinkform.css";
 
-const ImgLinkForm = ({ onInputChange }) => {
+const ImgLinkForm = ({ onInputChange, onSubmit }) => {
   return (
     <>
       <div>
@@ -9,7 +9,7 @@ const ImgLinkForm = ({ onInputChange }) => {
       </div>
       <div className="form">
         <input type="text" onChange={onInputChange} />
-        <button>Detect</button>
+        <button onClick={onSubmit}>Detect</button>
       </div>
     </>
   );
