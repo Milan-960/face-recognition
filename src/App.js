@@ -1,35 +1,37 @@
-import React, { useCallback } from "react";
+import React, { Component } from "react";
 
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Logo from "./Components/Logo/Logo";
 import ImgLinkForm from "./Components/ImgLinkForm/ImgLinkForm";
 import Rank from "./Components/Rank/Rank";
+import Particale from "./particlesOptions/Particale.js";
 
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import particlesOptions from "./particlesOptions/ParticlesOptions.json";
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      input: "",
+    };
+  }
 
-function App() {
-  const particlesInit = useCallback((main) => {
-    loadFull(main);
-  }, []);
+  onInputChange = (event) => {
+    console.log(event);
+  };
 
-  return (
-    <>
-      <div className="App">
-        <Particles
-          options={particlesOptions}
-          init={particlesInit}
-          className="particals"
-        />
-        <Navbar />
-        <Logo />
-        <Rank />
-        <ImgLinkForm />
-      </div>
-    </>
-  );
+  render() {
+    return (
+      <>
+        <div className="App">
+          <Particale />
+          <Navbar />
+          <Logo />
+          <Rank />
+          <ImgLinkForm onInputChange={this.onInputChange} />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
