@@ -1,4 +1,6 @@
 import React from "react";
+import "./Auth.scss";
+
 
 class Register extends React.Component {
   constructor(props) {

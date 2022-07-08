@@ -1,4 +1,5 @@
 import React from "react";
+import "./Auth.scss"
 
 class Signin extends React.Component {
   constructor(props) {
