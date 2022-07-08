@@ -43,7 +43,7 @@ class Register extends React.Component {
 
   render() {
     return (
-      <article className="">
+      <article className="register_form">
         <main>
           <div>
             <form id="sign_up">
