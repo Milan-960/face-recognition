@@ -37,7 +37,7 @@ class Signin extends React.Component {
   render() {
     const { onRouteChange } = this.props;
     return (
-      <article className="">
+      <article className="login_form">
         <main>
           <div>
             <form>
